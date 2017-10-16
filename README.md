@@ -9,7 +9,7 @@ To create and download a Service Account you can visit https://console.developer
 
 ### Configure the container
 
-GCLOUD_SDK: version of gcloud sdk like `175.0.0`
-GCLOUD_PROJECT: gcloud project name
-GKE_CLUSTER: google container engine cluster id.
-ZONE: gcloud zone, e.g. `europe-west1-b`
+- GCLOUD_SDK: version of gcloud sdk like `175.0.0`
+- GCLOUD_PROJECT: gcloud project name
+- GKE_CLUSTER: google container engine cluster id.
+- ZONE: gcloud zone, e.g. `europe-west1-b`
