@@ -1,0 +1,9 @@
+version: '3'
+services:
+  gcloud-service-account:
+    build:
+      context: ./
+    image: lightspeedretail/gcloud-service-account:latest
+    entrypoint: "top"
+    volumes:
+      - ./secret.json:/secret.json
