@@ -5,5 +5,9 @@ services:
       context: ./
     image: lightspeedretail/gcloud-service-account:latest
     entrypoint: "top"
+    environment:
+      - GCLOUD_PROJECT=test
+      - GKE_CLUSTER=test
+      - ZONE=europe-west1-b
     volumes:
       - ./secret.json:/secret.json

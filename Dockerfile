@@ -5,10 +5,6 @@ ENV GCLOUD_SDK 175.0.0
 ENV PATH /google-cloud-sdk/bin:$PATH
 ENV GOOGLE_APPLICATION_CREDENTIALS /secret.json
 
-ENV GCLOUD_PROJECT my-gcloud-project
-ENV ZONE europe-west1-b
-ENV GKE_CLUSTER my-gke-cluster
-
 COPY run.sh /usr/bin/
 
 RUN set -ex ; \
