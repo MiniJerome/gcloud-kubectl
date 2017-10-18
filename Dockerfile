@@ -10,9 +10,10 @@ COPY run.sh /usr/bin/
 RUN set -ex ; \
   chmod +x /usr/bin/run.sh; \
   apk --no-cache add python; \
-  apk --no-cache --virtual .setup-dependencies add ca-certificates wget; \
+  apk --no-cache --virtual .setup_dependencies0 add ca-certificates wget; \
   wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-$GCLOUD_SDK-linux-x86_64.tar.gz; \
   tar xzf google-cloud-sdk-$GCLOUD_SDK-linux-x86_64.tar.gz; \
-  gcloud --quiet components update kubectl;
+  gcloud --quiet components update kubectl; \
+  apk del .setup_dependencies;
 
 ENTRYPOINT [ "/usr/bin/run.sh" ]
