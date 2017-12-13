@@ -14,6 +14,8 @@ RUN set -ex ; \
   wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-$GCLOUD_SDK-linux-x86_64.tar.gz; \
   tar xzf google-cloud-sdk-$GCLOUD_SDK-linux-x86_64.tar.gz; \
   gcloud --quiet components update kubectl; \
+  gcloud config set core/disable_usage_reporting true; \
+  gcloud config set component_manager/disable_update_check true; \
   apk del .setup_dependencies;
 
 ENTRYPOINT [ "/usr/bin/run.sh" ]
